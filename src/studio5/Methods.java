@@ -1,5 +1,7 @@
 package studio5;
 
+import java.awt.Color;
+
 import edu.princeton.cs.introcs.StdDraw;
 
 public class Methods {
@@ -16,7 +18,7 @@ public class Methods {
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
 		double distance = 0;
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
-		
+		distance= Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
 		return distance;
 	}
 
@@ -31,21 +33,33 @@ public class Methods {
 		StdDraw.setPenColor(StdDraw.BLACK);
 		StdDraw.filledCircle(x, y, radius);
 
+		Color blue = new Color (0, 109, 219);
+		StdDraw.setPenColor(blue);
+		StdDraw.filledCircle(x, y, 3.0/4.0 * radius);
+
+		Color red = new Color (146, 0, 0);
+		StdDraw.setPenColor(red);
+		StdDraw.filledCircle(x, y, 1.0/2.0 * radius);
+
+		Color yellow = new Color (255, 255, 109);
+		StdDraw.setPenColor(yellow);
+		StdDraw.filledCircle(x, y, 1.0/4.0 * radius);
+
 		// TODO: Draw the remaining rings of the bull's eye
 		// Blue ring with 3.0/4.0 the radius
 		// suggested rgb values: 0, 109, 219
 
-		
+
 
 		// Red ring with 1.0/2.0 the radius
 		// suggested rgb values: 146, 0, 0
 
-		
+
 
 		// Yellow ring with 1.0/4.0 the radius
 		// suggested rgb values: 255, 255, 109
 
-		
+
 	}
 
 	/**
@@ -59,12 +73,25 @@ public class Methods {
 	 * @return the String which results from substituting all of the target
 	 *         characters in the source String with the replacement String
 	 */
+	
+	private static char charAt(int i) {
+		char character = charAt(i);
+		return 0;
+	}
+	
 	public static String substituteAll(String source, char target, String replacement) {
 		String result = "";
 		// TODO: Finish this method
-		
+		for (int i = 0; i < source.length(); i++) { //check source length
+			charAt(i);
+			if (charAt(i).equals(target)) {
+				
+			}
+		}
 		return result;
 	}
+
+
 
 	/**
 	 * Compute the sum of elements in an array
@@ -75,7 +102,7 @@ public class Methods {
 	public static int arraySum(int[] values) {
 		int sum = 0;
 		// FIXME: Compute the sum of the values in an array
-		
+
 		return sum;
 	}
 
@@ -90,7 +117,7 @@ public class Methods {
 		int[] values = null; // FIXME: Create an array of the appropriate size
 		// TODO: Finish this method
 
-		
+
 
 		return values;
 	}
@@ -98,5 +125,5 @@ public class Methods {
 	// TODO: Create an arrayMean method which accepts an int array of values parameter.
 	// TODO: Create a JavaDoc comment for the arrayMean method.
 
-	
+
 }
